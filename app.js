@@ -1,5 +1,5 @@
-const SUPABASE_URL = 'https://wynsipybuskswbogoomx.supabase.co';
-const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_cBfTt9Z9R6ByKTAYecRVpw_TltjjOCH';
+const SUPABASE_URL = 'https://kzxagywfykxukhqoghsn.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_BLILiKMU2-G3OI3n46EaGA_LGc5PqoW';
 
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
 const cameraInput = document.getElementById('camera-input');
