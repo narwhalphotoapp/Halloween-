@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#120818">
+  <title>Spooky Photo Wall 🎃</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="moon">🌕</div>
+    <div class="title">🎃 SPOOKY<br>PHOTO WALL 👻</div>
+    <p>Scan. Snap. Share your spooky moments.</p>
+  </header>
+
+  <main class="wall" id="photo-wall"></main>
+
+  <div id="preview-modal" class="modal" hidden>
+    <div class="modal-content">
+      <h2>That’s spooky! 👻</h2>
+      <div class="preview-polaroid">
+        <div class="image-container"><img id="preview-img" alt="Photo preview"></div>
+        <input id="modal-caption-input" maxlength="40" placeholder="Add a message (optional)">
+      </div>
+      <div class="modal-buttons">
+        <button id="retake-btn" class="secondary-btn">Retake</button>
+        <button id="confirm-upload-btn" class="primary-btn">Post to Wall</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-bar">
+    <input type="file" id="camera-input" accept="image/*" capture="environment" hidden>
+    <label for="camera-input" class="snap-btn" id="open-camera-btn">📸 Capture your moment</label>
+    <small>No login needed • Your spooky ID is automatic</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
