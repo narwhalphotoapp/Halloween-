@@ -1,0 +1,26 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;padding-bottom:120px;color:#fff;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:radial-gradient(circle at 50% 0,#3b1450 0,#160b20 38%,#07050a 100%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:42px 42px}
+.hero{text-align:center;padding:26px 18px 12px;position:relative}
+.moon{font-size:2.5rem;filter:drop-shadow(0 0 16px #ffd86b)}
+.title{font-family:"Courier New",monospace;font-weight:900;letter-spacing:2px;font-size:clamp(1.8rem,8vw,3.1rem);line-height:1.02;text-shadow:3px 3px #000,0 0 18px #9b35ff}
+.hero p{margin-top:12px;color:#e6c9ef;font-size:.95rem}
+.wall{display:flex;flex-wrap:wrap;gap:26px;padding:20px 14px;justify-content:center;align-items:flex-start}
+.polaroid{width:min(220px,42vw);background:#fff;padding:12px 12px 30px;color:#17131a;box-shadow:0 12px 28px rgba(0,0,0,.65);border-radius:2px;animation:pop .35s ease}
+.image-container{width:100%;aspect-ratio:1/1;overflow:hidden;background:#ddd}
+.image-container img{width:100%;height:100%;display:block;object-fit:cover}
+.caption-text{margin-top:12px;min-height:1.1em;text-align:center;font-family:"Courier New",monospace;font-weight:900;font-size:.95rem;overflow-wrap:anywhere}
+@keyframes pop{from{opacity:0;transform:scale(.8) rotate(0)}to{opacity:1}}
+.footer-bar{position:fixed;z-index:50;bottom:0;left:0;right:0;padding:13px 18px calc(13px + env(safe-area-inset-bottom));background:rgba(10,7,14,.94);backdrop-filter:blur(12px);box-shadow:0 -8px 25px rgba(0,0,0,.55);display:flex;flex-direction:column;align-items:center;gap:7px}
+.snap-btn{width:min(390px,100%);padding:16px 22px;border-radius:999px;text-align:center;font-weight:900;font-size:1.05rem;background:#ff751f;color:#fff;box-shadow:0 0 24px rgba(255,117,31,.45);cursor:pointer}
+.footer-bar small{color:#bba9c4}
+.modal{position:fixed;z-index:100;inset:0;background:rgba(0,0,0,.88);display:grid;place-items:center;padding:18px}
+.modal[hidden]{display:none}
+.modal-content{width:min(360px,100%);padding:20px;background:#1b1222;border:1px solid #56356a;border-radius:18px;text-align:center}
+.modal-content h2{margin-bottom:16px}
+.preview-polaroid{background:#fff;padding:12px 12px 18px;color:#111}
+#modal-caption-input{width:100%;margin-top:12px;padding:11px;border:1px solid #bbb;border-radius:5px;text-align:center;font-family:"Courier New",monospace;font-weight:700}
+.modal-buttons{display:flex;gap:10px;margin-top:16px}
+.modal-buttons button{flex:1;border:0;border-radius:999px;padding:12px;font-weight:800;cursor:pointer}
+.primary-btn{background:#ff751f;color:#fff}.secondary-btn{background:#4b3d50;color:#fff}
+@media(max-width:560px){.polaroid{width:min(180px,42vw)}.wall{gap:18px 12px;padding:15px 8px}.hero{padding-top:18px}}
